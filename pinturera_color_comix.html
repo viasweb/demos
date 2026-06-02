@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Pinturería Color Comix — Pintura & Detailing Automotriz</title>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -26,9 +26,10 @@
     color: var(--blanco);
     overflow-x: hidden;
   }
+  @media (pointer: fine) {
+    }
 
   /* ─── CURSOR PERSONALIZADO ─── */
-  body { cursor: none; }
   .cursor {
     width: 10px; height: 10px;
     background: var(--oro);
@@ -105,12 +106,14 @@
     display: flex;
     align-items: flex-end;
     overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
 
   .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1800&q=85');
+    background-image: url('https://viasweb.github.io/demos/hero.png');
     background-size: cover;
     background-position: center 30%;
     filter: brightness(0.35) saturate(0.8);
@@ -600,7 +603,7 @@
   .cta-band-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=1600&q=80');
+    background-image: url('https://viasweb.github.io/demos/taller.png');
     background-size: cover;
     background-position: center;
     filter: brightness(0.15) saturate(0.5);
@@ -643,7 +646,7 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 56px;
-    background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&q=80');
+    background-image: url('https://viasweb.github.io/demos/taller.png');
     background-size: cover;
     background-position: center;
   }
@@ -864,6 +867,7 @@
   @media (max-width: 900px) {
     nav { padding: 18px 24px; }
     .nav-links { display: none; }
+    .hero-bg { background-position: center center !important; }
     .hero-content { padding: 0 24px 60px; }
     .hero-badge { display: none; }
     .section { padding: 64px 24px; }
@@ -881,8 +885,12 @@
     .form-row { grid-template-columns: 1fr; }
     footer { padding: 24px; flex-direction: column; text-align: center; }
     .galeria-header { padding: 60px 24px 40px; flex-direction: column; align-items: flex-start; }
-    body { cursor: auto; }
-    .cursor, .cursor-ring { display: none; }
+    body { cursor: auto !important; }
+    .cursor, .cursor-ring { display: none !important; }
+  }
+  @media (hover: none) {
+    body { cursor: auto !important; }
+    .cursor, .cursor-ring { display: none !important; }
   }
 </style>
 </head>
@@ -899,7 +907,7 @@
     <li><a href="#galeria">Trabajos</a></li>
     <li><a href="#proceso">Proceso</a></li>
     <li><a href="#resenas">Reseñas</a></li>
-    <li><a href="#contacto" class="nav-cta">Cotizar</a></li>
+    <li><a href="#contacto" class="nav-cta">Consultar</a></li>
   </ul>
 </nav>
 
@@ -922,7 +930,7 @@
       En <strong>Pinturería Color Comix</strong> transformamos vehículos con pintura de alta gama, corrección de pintura y recubrimientos cerámicos. 10 años de experiencia en San Isidro.
     </p>
     <div class="hero-actions">
-      <a href="#contacto" class="btn-gold">Pedir cotización gratis</a>
+      <a href="#contacto" class="btn-gold">Consultar gratis</a>
       <a href="tel:+54 9 1171672500" class="btn-ghost">+54 9 1171672500</a>
     </div>
   </div>
@@ -1026,32 +1034,32 @@
     <div>
       <div class="section-label">
         <div class="section-label-line"></div>
-        <span>Nuestros trabajos</span>
+        <span>Lo que hacemos</span>
       </div>
-      <div class="section-title">El resultado<br>lo dice todo</div>
+      <div class="section-title">Cada trabajo,<br>una transformación</div>
     </div>
-    <p class="section-sub" style="max-width:360px;">Cada vehículo que pasa por nuestro taller sale diferente. Mejor. Estas son algunas de las transformaciones recientes.</p>
+    <p class="section-sub" style="max-width:360px;">Desde una corrección de pintura hasta una transformación completa con cerámico. Estos son los servicios que realizamos día a día en el taller.</p>
   </div>
 
   <div class="galeria-grid">
     <div class="galeria-item">
-      <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=900&q=85" alt="Auto deportivo rojo brillante">
+      <img src="https://viasweb.github.io/demos/ceramico.png" alt="Pintura completa y recubrimiento ceramico">
       <span class="galeria-label">Pintura completa + cerámico</span>
     </div>
     <div class="galeria-item">
-      <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&q=85" alt="Detalle de pintura negra">
+      <img src="https://viasweb.github.io/demos/correccion.png" alt="Correccion de pintura con pulidora">
       <span class="galeria-label">Corrección de pintura</span>
     </div>
     <div class="galeria-item">
-      <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600&q=85" alt="Auto blanco detailing">
+      <img src="https://viasweb.github.io/demos/detailing.png" alt="Detailing premium exterior">
       <span class="galeria-label">Detailing premium</span>
     </div>
     <div class="galeria-item">
-      <img src="https://images.unsplash.com/photo-1514316703755-dca7d7d9d882?w=600&q=85" alt="Interior premium">
+      <img src="https://viasweb.github.io/demos/interior.png" alt="Interior detailing limpieza profunda">
       <span class="galeria-label">Interior detailing</span>
     </div>
     <div class="galeria-item">
-      <img src="https://images.unsplash.com/photo-1593950315186-76a92975b60c?w=600&q=85" alt="Ruedas llantas detalle">
+      <img src="https://viasweb.github.io/demos/wrapping.png" alt="Vinilo y wrapping aplicacion">
       <span class="galeria-label">Wrapping + llantas</span>
     </div>
   </div>
@@ -1142,10 +1150,10 @@
   <div class="cta-band-overlay"></div>
   <div class="cta-band-content">
     <h2>¿Tu auto merece<br><span>verse así?</span></h2>
-    <p>Cotización sin cargo · Diagnóstico gratuito · Sin compromiso</p>
+    <p>Consulta sin cargo · Diagnóstico gratuito · Sin compromiso</p>
   </div>
   <div class="cta-band-action">
-    <a href="#contacto" class="btn-gold">Quiero mi cotización</a>
+    <a href="#contacto" class="btn-gold">Quiero consultar gratis</a>
   </div>
 </div>
 
@@ -1163,7 +1171,11 @@
           <div class="info-dot"></div>
           <div>
             <div class="info-row-label">Dirección</div>
-            <div class="info-row-val">Av. Centenario 888, B1642CAW San Isidro, Provincia de Buenos Aires, Argentina</div>
+            <div style="color:var(--blanco);margin-bottom:10px">Av. Centenario 888, B1642CAW San Isidro, Provincia de Buenos Aires, Argentina</div>
+            <a href="https://www.google.com/maps/search/Av.+Centenario+888,+B1642CAW+San+Isidro,+Provincia+de+Buenos+Aires,+Argentina" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--oro);color:var(--negro);padding:8px 16px;font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;margin-top:4px">
+              <svg style="width:14px;height:14px;fill:currentColor;flex-shrink:0" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Ver en Google Maps
+            </a>
           </div>
         </div>
         <div class="info-row">
@@ -1185,73 +1197,23 @@
   </div>
 
   <div class="contacto-form-wrap">
-    <div class="form-title">Pedí tu<br>cotización</div>
+    <div class="form-title">Pedí tu<br>consulta</div>
     <p class="form-sub">Completá el formulario y te respondemos en menos de 2 horas.</p>
-    <form class="form" onsubmit="return false;">
-
-      <!-- DATOS PERSONALES -->
+    <form class="form" onsubmit="enviarWhatsApp(); return false;">
       <div class="form-row">
         <div class="field">
           <label>Tu nombre</label>
-          <input type="text" placeholder="Juan García">
+          <input type="text" id="form-nombre" placeholder="Juan García">
         </div>
         <div class="field">
           <label>Teléfono / WhatsApp</label>
-          <input type="tel" placeholder="+54 9 11 0000-0000">
+          <input type="tel" id="form-telefono" placeholder="+54 9 11 0000-0000">
         </div>
       </div>
-
-      <!-- SELECTOR VEHÍCULO -->
-      <div class="vehicle-selector">
-        <div class="vehicle-selector-title">
-          <span class="vehicle-selector-line"></span>
-          Tu vehículo
-          <span class="vehicle-selector-line"></span>
-        </div>
-
-        <div class="form-row">
-          <div class="field">
-            <label>Marca</label>
-            <div class="custom-select-wrap">
-              <select id="sel-marca" onchange="cargarModelos()">
-                <option value="">— Seleccioná la marca —</option>
-              </select>
-              <span class="sel-arrow">▾</span>
-            </div>
-          </div>
-          <div class="field">
-            <label>Modelo</label>
-            <div class="custom-select-wrap">
-              <select id="sel-modelo" disabled>
-                <option value="">— Primero elegí la marca —</option>
-              </select>
-              <span class="sel-arrow">▾</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="field">
-            <label>Año</label>
-            <div class="custom-select-wrap">
-              <select id="sel-anio">
-                <option value="">— Año —</option>
-              </select>
-              <span class="sel-arrow">▾</span>
-            </div>
-          </div>
-          <div class="field">
-            <label>Color actual</label>
-            <input type="text" placeholder="Ej: Blanco, Rojo, Gris">
-          </div>
-        </div>
-      </div>
-
-      <!-- SERVICIO Y MENSAJE -->
       <div class="field">
         <label>Servicio que necesitás</label>
         <div class="custom-select-wrap">
-          <select>
+          <select id="form-servicio">
             <option value="">Seleccioná un servicio</option>
             <option>Pintura completa</option>
             <option>Corrección de pintura</option>
@@ -1264,13 +1226,14 @@
           <span class="sel-arrow">▾</span>
         </div>
       </div>
-
       <div class="field">
         <label>Contanos qué le pasa a tu auto (opcional)</label>
-        <textarea placeholder="Rayones, opacidad, abolladura, cambio de color..."></textarea>
+        <textarea id="form-mensaje" placeholder="Rayones, opacidad, abolladura, cambio de color..."></textarea>
       </div>
-
-      <button type="submit" class="btn-submit">Enviar consulta</button>
+      <button type="submit" class="btn-submit">
+        <svg style="width:20px;height:20px;fill:currentColor;vertical-align:middle;margin-right:8px" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Consultar por WhatsApp
+      </button>
     </form>
   </div>
 </div>
@@ -1287,92 +1250,29 @@
 </footer>
 
 <!-- WHATSAPP FLOTANTE -->
-<a href="https://wa.me/5491171672500" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a href="https://wa.me/5491171672500?text=Hola%20vengo%20del%20sitio%20web%20y%20quiero%20hacer%20una%20consulta" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
 </a>
 
 <script>
-  // ─── BASE DE DATOS VEHÍCULOS ARGENTINA ───
-  const vehiculos = {
-    "Acura": ["ILX","MDX","RDX","RLX","TLX"],
-    "Alfa Romeo": ["147","156","159","164","Giulia","Giulietta","GTV","MiTo","Spider","Stelvio"],
-    "Audi": ["A1","A2","A3","A4","A5","A6","A7","A8","Q2","Q3","Q5","Q7","Q8","RS3","RS4","RS5","RS6","RS7","S3","S4","S5","S6","S7","S8","SQ5","SQ7","TT"],
-    "BMW": ["116i","118i","120i","125i","130i","135i","218i","220i","228i","230i","316i","318i","320i","325i","328i","330i","335i","340i","418i","420i","428i","430i","435i","440i","520i","523i","525i","528i","530i","535i","540i","545i","550i","630i","635i","640i","645i","650i","730i","735i","740i","745i","750i","760i","M2","M3","M4","M5","M6","X1","X2","X3","X4","X5","X6","X7","Z3","Z4"],
-    "Chevrolet": ["Agile","Astra","Blazer","Camaro","Captiva","Cavalier","Classic","Cobalt","Colorado","Corsa","Corsa Classic","Corvette","Cruze","Equinox","Express","Impala","Joy","Malibu","Montana","Onix","Onix Plus","Orlando","Prisma","S10","Silverado","Sonic","Spin","Suburban","Tahoe","Tigra","Tracker","Trail Blazer","Traverse","Trax","Zafira"],
-    "Chrysler": ["200","300","300C","Aspen","Crossfire","Neon","PT Cruiser","Sebring","Town & Country","Voyager"],
-    "Citroën": ["Berlingo","C-Crosser","C-Elysée","C1","C2","C3","C3 Aircross","C3 Picasso","C4","C4 Cactus","C4 Lounge","C4 Picasso","C5","C6","C8","DS3","DS4","DS5","Jumper","Jumpy","Nemo","Saxo","Xantia","Xsara","Xsara Picasso"],
-    "Dodge": ["Avenger","Caliber","Challenger","Charger","Dakota","Dart","Durango","Grand Caravan","Journey","Neon","Nitro","RAM","Viper"],
-    "Ferrari": ["296","458","488","599","612","California","F12","F430","FF","GTC4Lusso","Portofino","Roma","SF90"],
-    "Fiat": ["500","500X","Argo","Barchetta","Bravo","Brio","Cronos","Doblo","Ducato","Fiorino","Freemont","Grand Siena","Idea","Linea","Marea","Mobi","Multipla","Palio","Palio Weekend","Punto","Qubo","Scudo","Siena","Stilo","Strada","Toro","Tipo","Uno"],
-    "Ford": ["Bronco","C-Max","Connect","Courier","EcoSport","Edge","Escape","Everest","Expedition","Explorer","F-150","F-250","F-350","Fiesta","Focus","Fusion","Galaxy","Ka","Ka+","Kuga","Maverick","Mondeo","Mustang","Puma","Ranger","S-Max","Territory","Transit","Taurus"],
-    "Honda": ["Accord","City","Civic","CR-V","CR-Z","Element","Fit","HR-V","Insight","Jazz","Legend","Odyssey","Passport","Pilot","Prelude","Ridgeline","S2000","WR-V"],
-    "Hyundai": ["Accent","Atos","Azera","Creta","Elantra","Galloper","Genesis","Grand i10","H-1","H100","i10","i20","i25","i30","i35","Santa Fe","Sonata","Terracan","Tucson","Veloster","Venue","Veracruz"],
-    "Infiniti": ["EX","FX","G","JX","M","Q30","Q50","Q60","Q70","QX30","QX50","QX56","QX60","QX70","QX80"],
-    "Jaguar": ["E-Pace","F-Pace","F-Type","I-Pace","S-Type","X-Type","XE","XF","XJ","XK"],
-    "Jeep": ["Cherokee","Commander","Compass","Gladiator","Grand Cherokee","Patriot","Renegade","Wrangler"],
-    "Kia": ["Carnival","Carens","Cerato","Forte","Niro","Optima","Picanto","Rio","Soul","Sorento","Sportage","Stinger","Stonic","Telluride"],
-    "Lamborghini": ["Aventador","Gallardo","Huracán","Murciélago","Urus"],
-    "Land Rover": ["Defender","Discovery","Discovery Sport","Freelander","Range Rover","Range Rover Evoque","Range Rover Sport","Range Rover Velar"],
-    "Lexus": ["CT","ES","GS","GX","IS","LX","NX","RX","UX"],
-    "Maserati": ["Ghibli","GranTurismo","Grecale","Levante","MC20","Quattroporte"],
-    "Mazda": ["2","3","5","6","BT-50","CX-3","CX-30","CX-5","CX-7","CX-9","MX-5","RX-7","RX-8"],
-    "Mercedes-Benz": ["A 180","A 200","A 250","B 180","B 200","C 180","C 200","C 220","C 250","C 300","C 350","CLA 200","CLA 250","CLC","CLK","CLS 350","CLS 400","CLS 500","E 200","E 220","E 250","E 300","E 350","E 400","E 500","G 350","G 500","G 63","GLA 200","GLA 250","GLB 200","GLC 200","GLC 250","GLC 300","GLE 350","GLE 400","GLE 43","GLS 350","GLS 400","GLS 450","ML 250","ML 300","ML 350","S 300","S 350","S 400","S 500","S 550","S 600","SL 350","SL 400","SL 500","SLC 200","SLK 200","SLK 250","SLK 350","Sprinter","Vito"],
-    "Mini": ["Clubman","Convertible","Cooper","Cooper S","Countryman","Paceman"],
-    "Mitsubishi": ["ASX","Eclipse Cross","Galant","L200","Lancer","Montero","Outlander","Pajero","Pajero Sport"],
-    "Nissan": ["Almera","Frontier","Juke","Kicks","Leaf","March","Maxima","Murano","Navara","Note","NP300","Pathfinder","Patrol","Pulsar","Qashqai","Sentra","Tiida","Titan","Versa","X-Trail","370Z","350Z"],
-    "Peugeot": ["1007","106","107","108","2008","206","207","208","3008","301","306","307","308","4007","4008","406","407","408","5008","506","508","Bipper","Boxer","Expert","Ion","Partner","RCZ"],
-    "Porsche": ["718 Boxster","718 Cayman","911","918","Cayenne","Macan","Panamera","Taycan"],
-    "RAM": ["700","1500","2500","3500","ProMaster"],
-    "Renault": ["Alaskan","Captur","Clio","Duster","Fluence","Kangoo","Koleos","Laguna","Logan","Master","Megane","Oroch","Sandero","Scenic","Symbol","Trafic","Twingo","Zoe"],
-    "Subaru": ["BRZ","Crosstrek","Forester","Impreza","Legacy","Outback","Tribeca","WRX","XV"],
-    "Suzuki": ["Alto","Baleno","Celerio","Grand Vitara","Ignis","Jimny","Kizashi","SX4","Swift","Vitara"],
-    "Toyota": ["4Runner","Auris","Avalon","Avensis","C-HR","Camry","Corolla","Echo","Etios","FJ Cruiser","Fortuner","Highlander","Hilux","Land Cruiser","Land Cruiser Prado","Matrix","Prius","RAV4","Rush","Sequoia","Sienna","SW4","Tacoma","Tundra","Urban Cruiser","Venza","Yaris"],
-    "Volkswagen": ["Amarok","Beetle","Bora","Caddy","California","Caravelle","CC","Crafter","Fox","Gol","Golf","Jetta","Magotan","Multivan","Passat","Phaeton","Polo","Scirocco","Sharan","T-Cross","T-Roc","Taos","Teramont","Tiguan","Touareg","Touran","Transporter","Up","Vento","Virtus","Voyage"],
-    "Volvo": ["C30","C70","S40","S60","S80","S90","V40","V50","V60","V70","V90","XC40","XC60","XC70","XC90"],
-    "Otros": ["Otro modelo"]
-  };
-
-  // Poblar marcas
-  const selMarca = document.getElementById('sel-marca');
-  const selModelo = document.getElementById('sel-modelo');
-  const selAnio = document.getElementById('sel-anio');
-
-  Object.keys(vehiculos).sort().forEach(marca => {
-    const opt = document.createElement('option');
-    opt.value = marca;
-    opt.textContent = marca;
-    selMarca.appendChild(opt);
-  });
-
-  // Poblar años (2025 hacia atrás hasta 1990)
-  for (let y = 2025; y >= 1990; y--) {
-    const opt = document.createElement('option');
-    opt.value = y;
-    opt.textContent = y;
-    selAnio.appendChild(opt);
+  // Funcion WhatsApp formulario
+  function enviarWhatsApp() {
+    var nombre   = document.getElementById('form-nombre').value || '';
+    var telefono = document.getElementById('form-telefono').value || '';
+    var servicio = document.getElementById('form-servicio').value || '';
+    var mensaje  = document.getElementById('form-mensaje').value || '';
+    var wa = '5491171672500';
+    var texto = 'Hola vengo del sitio web y quiero hacer una consulta.' +
+      (nombre   ? '%0ANombre: '   + encodeURIComponent(nombre)   : '') +
+      (telefono ? '%0ATelefono: ' + encodeURIComponent(telefono) : '') +
+      (servicio ? '%0AServicio: ' + encodeURIComponent(servicio) : '') +
+      (mensaje  ? '%0ADetalle: '  + encodeURIComponent(mensaje)  : '');
+    window.open('https://wa.me/' + wa + '?text=' + texto, '_blank');
   }
 
-  function cargarModelos() {
-    const marca = selMarca.value;
-    selModelo.innerHTML = '';
-    if (!marca) {
-      selModelo.innerHTML = '<option value="">— Primero elegí la marca —</option>';
-      selModelo.disabled = true;
-      return;
-    }
-    const placeholder = document.createElement('option');
-    placeholder.value = '';
-    placeholder.textContent = '— Seleccioná el modelo —';
-    selModelo.appendChild(placeholder);
-
-    vehiculos[marca].forEach(modelo => {
-      const opt = document.createElement('option');
-      opt.value = modelo;
-      opt.textContent = modelo;
-      selModelo.appendChild(opt);
-    });
+);
     selModelo.disabled = false;
   }
 
