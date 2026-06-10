@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bono Andrea Erica .Especialista En Ortodoncia y ATM — Odontología</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blanco: #ffffff;
+    --crema: #f8f6f2;
+    --azul: #1a3a5c;
+    --azul-claro: #2d6a9f;
+    --celeste: #e8f4fd;
+    --gris: #6b7280;
+    --gris-claro: #f3f4f6;
+    --negro: #0f1923;
+    --oro: #c9a84c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--blanco);
+    color: var(--negro);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 48px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(26,58,92,0.08);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--azul);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo span {
+    color: var(--oro);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--gris);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--azul); }
+
+  .nav-cta {
+    background: var(--azul);
+    color: var(--blanco) !important;
+    padding: 10px 24px;
+    font-size: 0.8rem !important;
+    letter-spacing: 1.5px !important;
+    transition: background 0.3s !important;
+  }
+
+  .nav-cta:hover { background: var(--azul-claro) !important; color: var(--blanco) !important; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://viasweb.github.io/demos/odonto-hero.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(26,58,92,0.85) 0%, rgba(15,25,35,0.5) 60%, transparent 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 48px 80px;
+    max-width: 700px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--oro);
+    padding: 6px 16px;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--oro);
+    border-radius: 50%;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 300;
+    color: var(--blanco);
+    line-height: 1.05;
+    margin-bottom: 24px;
+  }
+
+  .hero-title strong {
+    font-weight: 600;
+    color: var(--oro);
+    font-style: italic;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 500px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--oro);
+    color: var(--negro);
+    padding: 14px 32px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .btn-primary:hover { background: #b8973d; transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 2px;
+    transition: all 0.3s;
+  }
+
+  .btn-secondary:hover { color: var(--blanco); border-color: var(--blanco); }
+
+  .hero-phone {
+    position: absolute;
+    bottom: 40px;
+    right: 48px;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+  }
+
+  /* TICKER */
+  .ticker {
+    background: var(--azul);
+    padding: 14px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .ticker-inner {
+    display: inline-flex;
+    gap: 0;
+    animation: ticker 30s linear infinite;
+  }
+
+  .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 40px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .ticker-dot {
+    width: 4px;
+    height: 4px;
+    background: var(--oro);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* STATS */
+  .stats-bar {
+    background: var(--crema);
+    padding: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background-color: rgba(26,58,92,0.1);
+  }
+
+  .stat-item {
+    background: var(--crema);
+    padding: 32px 40px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--azul);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-num span { color: var(--oro); }
+
+  .stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gris);
+  }
+
+  /* SERVICIOS */
+  .section {
+    padding: 100px 48px;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--oro);
+  }
+
+  .section-label span {
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--oro);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    color: var(--azul);
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .section-sub {
+    color: var(--gris);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 500px;
+  }
+
+  /* GRID SERVICIOS */
+  .servicios-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 64px;
+  }
+
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(26,58,92,0.1);
+  }
+
+  .servicio-card {
+    background: var(--blanco);
+    padding: 40px 32px;
+    transition: all 0.3s;
+    cursor: default;
+  }
+
+  .servicio-card:hover {
+    background: var(--azul);
+    transform: translateY(-4px);
+  }
+
+  .servicio-card:hover .servicio-titulo,
+  .servicio-card:hover .servicio-desc { color: var(--blanco); }
+
+  .servicio-card:hover .servicio-num { color: rgba(201,168,76,0.5); }
+
+  .servicio-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--gris-claro);
+    line-height: 1;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+  }
+
+  .servicio-titulo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--azul);
+    margin-bottom: 10px;
+    transition: color 0.3s;
+  }
+
+  .servicio-desc {
+    font-size: 0.85rem;
+    color: var(--gris);
+    line-height: 1.6;
+    transition: color 0.3s;
+  }
+
+  /* GALERIA */
+  .galeria-section {
+    background: var(--negro);
+    padding: 100px 0 0;
+  }
+
+  .galeria-header {
+    padding: 0 48px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .galeria-header .section-title { color: var(--blanco); }
+  .galeria-header .section-label span { color: var(--oro); }
+  .galeria-header .section-label::before { background: var(--oro); }
+
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 2px;
+  }
+
+  .galeria-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .galeria-item:first-child {
+    grid-row: span 2;
+  }
+
+  .galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: brightness(0.75);
+  }
+
+  .galeria-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+  }
+
+  .galeria-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+  }
+
+  /* PROCESO */
+  .proceso-section {
+    background: var(--crema);
+    padding: 100px 48px;
+  }
+
+  .proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 64px;
+  }
+
+  .proceso-step {
+    position: relative;
+  }
+
+  .proceso-step::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -20px;
+    width: 40px;
+    height: 1px;
+    background: rgba(26,58,92,0.2);
+  }
+
+  .proceso-step:last-child::after { display: none; }
+
+  .proceso-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: rgba(26,58,92,0.12);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .proceso-titulo {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--azul);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .proceso-desc {
+    font-size: 0.82rem;
+    color: var(--gris);
+    line-height: 1.6;
+  }
+
+  /* RESENAS */
+  .resenas-section { padding: 100px 48px; }
+
+  .resenas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+  }
+
+  .resena-card {
+    background: var(--crema);
+    padding: 36px;
+    border-left: 3px solid var(--oro);
+  }
+
+  .resena-stars {
+    color: var(--oro);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .resena-texto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--negro);
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .resena-autor {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gris);
+    font-weight: 500;
+  }
+
+  /* CTA BAND */
+  .cta-band {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 400px;
+    overflow: hidden;
+  }
+
+  .cta-band-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0f1923 0%, #1a3a5c 50%, #2d6a9f 100%);
+  }
+
+  .cta-band-content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cta-band-content .section-title { color: var(--blanco); }
+
+  .cta-band-desc {
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 20px 0 36px;
+  }
+
+  /* CONTACTO */
+  #contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+  }
+
+  .contacto-info {
+    background: var(--azul);
+    padding: 80px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contacto-info::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+    pointer-events: none;
+  }
+
+  .contacto-info::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.06);
+    pointer-events: none;
+  }
+
+  .contacto-info .section-title { color: var(--blanco); font-size: 2.5rem; }
+  .contacto-info .section-label span { color: var(--oro); }
+  .contacto-info .section-label::before { background: var(--oro); }
+
+  .info-items {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .info-label {
+    font-size: 0.68rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .info-value {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.5;
+  }
+
+  .btn-maps {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--oro);
+    color: var(--negro);
+    padding: 8px 16px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 8px;
+    width: fit-content;
+    transition: background 0.3s;
+  }
+
+  .btn-maps:hover { background: #b8973d; }
+
+  /* FORMULARIO */
+  .contacto-form-wrap {
+    background: var(--blanco);
+    padding: 80px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--azul);
+    margin-bottom: 8px;
+  }
+
+  .form-subtitle {
+    font-size: 0.85rem;
+    color: var(--gris);
+    margin-bottom: 36px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .field label {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gris);
+    font-weight: 500;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    background: var(--crema);
+    border: 1px solid rgba(26,58,92,0.12);
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--negro);
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+    appearance: none;
+  }
+
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    border-color: var(--azul);
+  }
+
+  .field textarea {
+    resize: none;
+    height: 100px;
+  }
+
+  .custom-select-wrap {
+    position: relative;
+  }
+
+  .custom-select-wrap::after {
+    content: '▾';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gris);
+    pointer-events: none;
+    font-size: 0.8rem;
+  }
+
+  .btn-submit {
+    background: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 16px 32px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btn-submit:hover { background: var(--azul-claro); }
+
+  /* FOOTER */
+  footer {
+    background: var(--negro);
+    padding: 32px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .footer-logo span { color: var(--oro); }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 1px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--oro); }
+
+  /* WA FLOAT */
+  .wa-float {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.3s;
+    text-decoration: none;
+  }
+
+  .wa-float:hover { transform: scale(1.1); }
+
+  .wa-float svg { width: 28px; height: 28px; fill: white; }
+
+  /* MOBILE */
+  @media (max-width: 900px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .hero-content { padding: 0 24px 60px; }
+    .hero-badge { display: none; }
+    .hero-phone { display: none; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 0; }
+    .stat-item { padding: 24px 20px; }
+    .section { padding: 64px 24px; }
+    .servicios-intro { grid-template-columns: 1fr; gap: 32px; }
+    .servicios-grid { grid-template-columns: 1fr; }
+    .galeria-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .galeria-item:first-child { grid-row: auto; }
+    .proceso-grid { grid-template-columns: 1fr 1fr; }
+    .proceso-step::after { display: none; }
+    .resenas-grid { grid-template-columns: 1fr; }
+    .cta-band { grid-template-columns: 1fr; }
+    .cta-band-content { padding: 64px 24px; }
+    #contacto { grid-template-columns: 1fr; }
+    .contacto-info { padding: 48px 24px; }
+    .contacto-form-wrap { padding: 48px 24px; }
+    .form-row { grid-template-columns: 1fr; }
+    .galeria-header { padding: 0 24px 40px; flex-direction: column; align-items: flex-start; gap: 16px; }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
+    .footer-links { display: none; }
+    body { cursor: auto !important; }
+  }
+
+  @media (hover: none) {
+    body { cursor: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Bono Andrea Erica .Especialista En Ortodoncia y ATM <span>◆</span></div>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#resenas">Reseñas</a></li>
+    <li><a href="#contacto" class="nav-cta">Turnos</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Odontología · {{CIUDAD}}</div>
+
+    <h1 class="hero-title">Tu sonrisa,<br><strong>transformada.</strong></h1>
+    <p class="hero-desc">En Bono Andrea Erica .Especialista En Ortodoncia y ATM cuidamos tu salud bucal con tecnología de vanguardia y un trato personalizado. {{AÑOS_EXPERIENCIA}} años de experiencia en {{CIUDAD}}.</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">Pedir turno</a>
+      <a href="#servicios" class="btn-secondary">Ver servicios →</a>
+    </div>
+  </div>
+  <div class="hero-phone">— 0221 470-7958</div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="ticker-dot"></span>Limpieza dental</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Blanqueamiento</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Ortodoncia</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Implantes</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Urgencias</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Consulta gratuita</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Limpieza dental</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Blanqueamiento</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Ortodoncia</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Implantes</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Urgencias</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Consulta gratuita</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num">{{AÑOS_EXPERIENCIA}}<span>+</span></div>
+    <div class="stat-label">Años de experiencia</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">+1000<span>+</span></div>
+    <div class="stat-label">Pacientes atendidos</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">{{CALIFICACION}}<span>★</span></div>
+    <div class="stat-label">Calificación Google</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">{{CANTIDAD_RESENAS}}<span>+</span></div>
+    <div class="stat-label">Reseñas verificadas</div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+  <div class="servicios-intro">
+    <div>
+      <div class="section-label"><span>Nuestros servicios</span></div>
+      <h2 class="section-title">Todo lo que<br>tu sonrisa necesita</h2>
+    </div>
+    <p class="section-sub">Ofrecemos una atención integral con los últimos avances en odontología. Cada tratamiento es personalizado según tus necesidades.</p>
+  </div>
+  <div class="servicios-grid">
+    <div class="servicio-card">
+      <div class="servicio-num">01</div>
+      <div class="servicio-titulo">Consulta y diagnóstico</div>
+      <div class="servicio-desc">Evaluación completa de tu salud bucal con tecnología de diagnóstico digital.</div>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-num">02</div>
+      <div class="servicio-titulo">Limpieza dental</div>
+      <div class="servicio-desc">Profilaxis profesional para eliminar sarro y manchas, devolviendo el brillo natural a tus dientes.</div>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-num">03</div>
+      <div class="servicio-titulo">Blanqueamiento</div>
+      <div class="servicio-desc">Tratamientos de blanqueamiento seguros y efectivos para una sonrisa varios tonos más blanca.</div>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-num">04</div>
+      <div class="servicio-titulo">Ortodoncia</div>
+      <div class="servicio-desc">Brackets tradicionales y alineadores transparentes para corregir la posición de tus dientes.</div>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-num">05</div>
+      <div class="servicio-titulo">Implantes dentales</div>
+      <div class="servicio-desc">Soluciones permanentes para reemplazar dientes faltantes con resultados naturales y duraderos.</div>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-num">06</div>
+      <div class="servicio-titulo">Urgencias</div>
+      <div class="servicio-desc">Atención de urgencias el mismo día. No te quedés con dolor, llamanos y te damos turno.</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria-section">
+  <div class="galeria-header">
+    <div>
+      <div class="section-label"><span>Lo que hacemos</span></div>
+      <h2 class="section-title">Cada tratamiento,<br>un resultado real</h2>
+    </div>
+  </div>
+  <div class="galeria-grid">
+    <div class="galeria-item">
+      <img src="https://viasweb.github.io/demos/odonto-galeria1.png" alt="Consulta odontológica">
+      <div class="galeria-label">Consulta y diagnóstico</div>
+    </div>
+    <div class="galeria-item">
+      <img src="https://viasweb.github.io/demos/odonto-galeria2.png" alt="Limpieza dental">
+      <div class="galeria-label">Limpieza dental</div>
+    </div>
+    <div class="galeria-item">
+      <img src="https://viasweb.github.io/demos/odonto-galeria3.png" alt="Blanqueamiento">
+      <div class="galeria-label">Blanqueamiento</div>
+    </div>
+    <div class="galeria-item">
+      <img src="https://viasweb.github.io/demos/odonto-galeria4.png" alt="Ortodoncia">
+      <div class="galeria-label">Ortodoncia</div>
+    </div>
+    <div class="galeria-item">
+      <img src="https://viasweb.github.io/demos/odonto-galeria5.png" alt="Implantes">
+      <div class="galeria-label">Implantes</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="proceso-section" id="proceso">
+  <div class="section-label"><span>Cómo trabajamos</span></div>
+  <h2 class="section-title">Tu primera visita,<br>paso a paso</h2>
+  <div class="proceso-grid">
+    <div class="proceso-step">
+      <div class="proceso-num">01</div>
+      <div class="proceso-titulo">Pedís tu turno</div>
+      <div class="proceso-desc">Por WhatsApp, llamada o formulario. Confirmamos en menos de una hora.</div>
+    </div>
+    <div class="proceso-step">
+      <div class="proceso-num">02</div>
+      <div class="proceso-titulo">Diagnóstico inicial</div>
+      <div class="proceso-desc">Evaluamos tu salud bucal de forma completa y te explicamos qué necesitás.</div>
+    </div>
+    <div class="proceso-step">
+      <div class="proceso-num">03</div>
+      <div class="proceso-titulo">Plan de tratamiento</div>
+      <div class="proceso-desc">Te presentamos las opciones y los costos sin letra chica ni sorpresas.</div>
+    </div>
+    <div class="proceso-step">
+      <div class="proceso-num">04</div>
+      <div class="proceso-titulo">Seguimiento</div>
+      <div class="proceso-desc">Te acompañamos en todo el proceso y coordinamos los controles que necesitás.</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESENAS -->
+<section class="resenas-section" id="resenas">
+  <div class="section-label"><span>Reseñas</span></div>
+  <h2 class="section-title">Lo que dicen<br>nuestros pacientes</h2>
+  <div class="resenas-grid">
+    <div class="resena-card">
+      <div class="resena-stars">★★★★★</div>
+      <p class="resena-texto">"Experiencia única ..hermoso lugar 😊🤭"</p>
+      <div class="resena-autor">— Nelson Martinez</div>
+    </div>
+    <div class="resena-card">
+      <div class="resena-stars">★★★★★</div>
+      <p class="resena-texto">"Excelente profesional y su equipo!!"</p>
+      <div class="resena-autor">— FABIANA STANCATO</div>
+    </div>
+    <div class="resena-card">
+      <div class="resena-stars">★★★★★</div>
+      <p class="resena-texto">"Profesional, puntual y buen precio. Los recomiendo."</p>
+      <div class="resena-autor">— Marcela Viviana</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-bg"></div>
+  <div class="cta-band-content">
+    <div class="section-label"><span>Turno online</span></div>
+    <h2 class="section-title" style="color:white">Pedí tu turno<br>hoy mismo</h2>
+    <p class="cta-band-desc">Sin esperas innecesarias. Confirmamos tu turno en menos de una hora y te recordamos por WhatsApp.</p>
+    <a href="#contacto" class="btn-primary" style="width:fit-content">Reservar turno →</a>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contacto-info">
+    <div class="section-label"><span>Dónde estamos</span></div>
+    <h2 class="section-title">Visitanos<br>en el consultorio</h2>
+    <div class="info-items">
+      <div class="info-item">
+        <span class="info-label">Dirección</span>
+        <span class="info-value">C. 132 71 No (33 y 34, B1900 La Plata, Provincia de Buenos Aires, Argentina</span>
+        <a href="https://www.google.com/maps/search/C.%20132%2071%20No%20%2833%20y%2034%2C%20B1900%20La%20Plata%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina" target="_blank" class="btn-maps">
+          <svg style="width:12px;height:12px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Ver en Google Maps
+        </a>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Teléfono / WhatsApp</span>
+        <span class="info-value">0221 470-7958</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Horario</span>
+        <span class="info-value">Lunes a Viernes 8:00 – 19:00 hs</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contacto-form-wrap">
+    <div class="form-title">Pedí tu consulta</div>
+    <p class="form-subtitle">Completá el formulario y te respondemos en menos de 2 horas.</p>
+    <form class="form" onsubmit="enviarWhatsApp(); return false;">
+      <div class="form-row">
+        <div class="field">
+          <label>Tu nombre</label>
+          <input type="text" id="form-nombre" placeholder="Juan García">
+        </div>
+        <div class="field">
+          <label>Teléfono / WhatsApp</label>
+          <input type="tel" id="form-telefono" placeholder="+54 9 11 0000-0000">
+        </div>
+      </div>
+      <div class="field">
+        <label>Servicio que necesitás</label>
+        <div class="custom-select-wrap">
+          <select id="form-servicio">
+            <option value="">Seleccioná un servicio</option>
+            <option>Consulta y diagnóstico</option>
+            <option>Limpieza dental</option>
+            <option>Blanqueamiento</option>
+            <option>Ortodoncia</option>
+            <option>Implantes dentales</option>
+            <option>Urgencia dental</option>
+            <option>No sé, necesito diagnóstico</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Contanos qué necesitás (opcional)</label>
+        <textarea id="form-mensaje" placeholder="Dolor, consulta de precio, turno de control..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">
+        <svg style="width:18px;height:18px;fill:currentColor;vertical-align:middle" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Consultar por WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Bono Andrea Erica .Especialista En Ortodoncia y ATM <span>◆</span></div>
+  <span class="footer-copy">© 2026 · Todos los derechos reservados</span>
+  <ul class="footer-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/5492214707958" target="_blank" class="wa-float">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  function enviarWhatsApp() {
+    var nombre   = document.getElementById('form-nombre').value || '';
+    var telefono = document.getElementById('form-telefono').value || '';
+    var servicio = document.getElementById('form-servicio').value || '';
+    var mensaje  = document.getElementById('form-mensaje').value || '';
+    var wa = '5492214707958';
+    var texto = 'Hola, vi su página y quiero consultar.' +
+      (nombre   ? '%0ANombre: '   + encodeURIComponent(nombre)   : '') +
+      (telefono ? '%0ATelefono: ' + encodeURIComponent(telefono) : '') +
+      (servicio ? '%0AServicio: ' + encodeURIComponent(servicio) : '') +
+      (mensaje  ? '%0ADetalle: '  + encodeURIComponent(mensaje)  : '');
+    window.open('https://wa.me/' + wa + '?text=' + texto, '_blank');
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.servicio-card, .resena-card, .proceso-step, .stat-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
